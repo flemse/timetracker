@@ -1,3 +1,15 @@
 <h2 id="title">Welcome to Ember.js</h2>
 
-{{outlet}}
+{{input type='text' value=currentTrack}}
+
+<button {{action 'start'}}>start</button>
+
+<h2>active</h2>
+{{#each track in active}}
+  <div>{{track.name}}</div>
+{{/each}}
+
+<h2>inactive</h2>
+{{#each track in inactive}}
+  <div>{{track.name}}</div>
+{{/each}}
